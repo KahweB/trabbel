@@ -2,7 +2,7 @@ import React from 'react'
 
 import Link from 'next/link'
 import { Menu } from 'lucide-react'
-import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
+import { Sheet, SheetClose, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import { navigationLinks } from '@/links'
 
 
@@ -19,9 +19,19 @@ const MobileMenu = () => {
                 <SheetHeader>
                     <SheetTitle>Menu</SheetTitle>
                     <SheetDescription>
-                        {navigationLinks.map((links, index) => (
-                            <Link href={links.href} key={index} className='text-orange-500'>{links.label}</Link>
-                        ))}
+                        <div className='mt-8 flex flex-col gap-3'>
+
+                            {navigationLinks.map((links, index) => (
+                                <SheetClose asChild key={index}>
+                                    <Link href={links.href} key={index} className='font-semibold text-3xl  block hover:text-orange-500'>{links.label}</Link>
+                                </SheetClose>
+
+
+                            ))}
+
+
+                        </div>
+
                     </SheetDescription>
                 </SheetHeader>
             </SheetContent>

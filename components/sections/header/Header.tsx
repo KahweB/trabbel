@@ -4,10 +4,11 @@ import React from 'react'
 import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoGithub } from "react-icons/io";
 import { FaInstagram } from "react-icons/fa6";
-import { MessageCircle, Phone, Search, User } from 'lucide-react';
+import { MessageCircle, Phone, User } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import MobileMenu from './MobileMenu';
+import SearchPopup from './SearchPopup';
 import { navigationLinks } from '@/links';
 
 const Header = () => {
@@ -53,13 +54,16 @@ const Header = () => {
             {/**nav bar */}
             <div className='bg-white h-28 text-black shadow flex items-center'>
                 <div className='container mx-auto px-4 py-3 flex justify-between items-center'>
-                    <Image
-                        src={"/logo.png"}
-                        alt='travel'
-                        width={210}
-                        height={50}
-                        className='w-36 lg:w-52 h-auto'
-                    />
+                    <Link href="/">
+                        <Image
+                            src={"/logo.png"}
+                            alt='travel'
+                            width={210}
+                            height={50}
+                            className='w-36 lg:w-52 h-auto'
+                        />
+                    </Link>
+
                     <nav className='hidden lg:flex space-x-7 text-lg font-semibold'>
                         {
                             navigationLinks.map((e, index) => (
@@ -68,11 +72,9 @@ const Header = () => {
                         }
                     </nav>
                     <div className='flex items-center space-x-4'>
-                        <div className='p-3 hidden lg:flex bg-orange-500 cursor-pointer text-white rounded-full'>
-                            <Search />
-                        </div>
+                        <SearchPopup />
                         <MobileMenu />
-                        <div className='p-3 hidden lg:flex bg-orange-500 cursor-pointer text-white rounded-full'>
+                        <div className='p-3  lg:flex bg-blue-400 cursor-pointer text-white rounded-full'>
                             <User />
                         </div>
                     </div>
