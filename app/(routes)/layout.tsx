@@ -1,5 +1,5 @@
-import Footer from '@/components/sections/Footer'
-import Header from '@/components/sections/Header'
+import Footer from '@/components/sections/footer/Footer'
+import Header from '@/components/sections/header/Header'
 import React from 'react'
 
 interface RouteLayoutProps {
@@ -13,7 +13,6 @@ const RouteLayout = ({ children }: RouteLayoutProps) => {
             <div className='min-h-screen'>
                 {children}
             </div>
-
             <Footer />
         </div>
     )

@@ -3,8 +3,9 @@ import Link from 'next/link'
 import React from 'react'
 import { FaInstagram, FaXTwitter } from 'react-icons/fa6'
 import { IoLogoGithub } from 'react-icons/io'
-import { Input } from '../ui/input'
-import { Button } from '../ui/button'
+import { Input } from '../../ui/input'
+import { Button } from '../../ui/button'
+import { navigationLinks } from '@/links'
 
 const Footer = () => {
     const socialLinks = [
@@ -18,29 +19,11 @@ const Footer = () => {
             href: "#", icon: <FaInstagram />
         }
     ]
-    const navigationLinks = [
-        {
-            href: "/", label: "Home"
-        },
-        {
-            href: "/about", label: "About"
-        },
-        {
-            href: "/contact", label: "Contact"
-        },
-        {
-            href: "/hotels", label: "Hotels"
-        },
-        {
-            href: "/rent-a-cars", label: "Rent A Car"
-        },
-        {
-            href: "/trips", label: "Trips"
-        }
-    ]
+
+
     const instagramImages = Array.from({ length: 11 }, (_, index) => `/instagram/${index + 1}.jpg`)
     return (
-        <footer className='relative bg-black text-white'>
+        <footer className='relative bg-black text-white '>
             <div className='absolute -top-52 left-1/2 transform -translate-x-1/2 bg-orange-500 text-left px-6 py-12 rounded-md shadow-lg w-11/12 max-w-6xl h-72 grid grid-cols-1 md:grid-cols-2 items-center gap-6'>
                 <div>
                     <h2 className='text-3xl font-bold'> Ready to get started?</h2>

@@ -4,9 +4,11 @@ import React from 'react'
 import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoGithub } from "react-icons/io";
 import { FaInstagram } from "react-icons/fa6";
-import { Menu, MessageCircle, Phone, Search, User } from 'lucide-react';
+import { MessageCircle, Phone, Search, User } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import MobileMenu from './MobileMenu';
+import { navigationLinks } from '@/links';
 
 const Header = () => {
     const socialLinks = [
@@ -20,26 +22,7 @@ const Header = () => {
             href: "#", icon: <FaInstagram />
         }
     ]
-    const navigationLinks = [
-        {
-            href: "/", label: "Home"
-        },
-        {
-            href: "/about", label: "About"
-        },
-        {
-            href: "/contact", label: "Contact"
-        },
-        {
-            href: "/hotels", label: "Hotels"
-        },
-        {
-            href: "/rent-a-cars", label: "Rent A Car"
-        },
-        {
-            href: "/trips", label: "Trips"
-        }
-    ]
+
     return (
         <header className='bg-black text-white '>
             <div className='flex container mx-auto h-16 justify-center md:justify-between items-center px-4 py-2 text-sm'>
@@ -88,9 +71,7 @@ const Header = () => {
                         <div className='p-3 hidden lg:flex bg-orange-500 cursor-pointer text-white rounded-full'>
                             <Search />
                         </div>
-                        <div className='p-3 hidden lg:flex bg-orange-500 cursor-pointer text-white rounded-full'>
-                            <Menu />
-                        </div>
+                        <MobileMenu />
                         <div className='p-3 hidden lg:flex bg-orange-500 cursor-pointer text-white rounded-full'>
                             <User />
                         </div>
