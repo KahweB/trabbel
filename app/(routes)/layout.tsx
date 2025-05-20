@@ -9,8 +9,11 @@ interface RouteLayoutProps {
 const RouteLayout = ({ children }: RouteLayoutProps) => {
     return (
         <div>
-            <Header min-h-screen />
-            {children}
+            <Header />
+            <div className='min-h-screen'>
+                {children}
+            </div>
+
             <Footer />
         </div>
     )
