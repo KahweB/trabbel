@@ -20,6 +20,8 @@ import {
 import { packages } from '@/constants'
 import Image from 'next/image'
 import { Badge } from '@/components/ui/badge'
+import { Clock, MapPin } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
 const RecentProduct = () => {
     return (
@@ -33,12 +35,13 @@ const RecentProduct = () => {
                     delay: 2000,
                 }),
             ]}
+            className='container mx-auto px-10 lg:px-36 '
         >
             <CarouselContent>
                 {packages.map((pkg, index) => (
                     <CarouselItem key={index} className='lg:basis-1/2 xl:basis-1/4'>
                         <div className='p-3'>
-                            <Card>
+                            <Card className='shadow-lg'>
                                 <CardHeader className='relative'>
                                     <Image
                                         width={500}
@@ -55,21 +58,33 @@ const RecentProduct = () => {
                                         )
                                     }
                                 </CardHeader>
-                                <CardContent>
-                                    <CardTitle>Card Title</CardTitle>
-                                    <CardDescription>Card Description</CardDescription>
-
+                                <CardContent className='p-3'>
+                                    <CardTitle className='h-[120] text-xl'>{pkg.title}</CardTitle>
+                                    <CardDescription className='flex item-center text-sm  text-gray-500 mt-2'>
+                                        <MapPin className='w-4 h-4 mr-2' />{pkg.location}
+                                    </CardDescription>
+                                    <CardDescription className='flex item-center text-sm text-gray-500 mt-2'>
+                                        <Clock className='w-4 h-4 mr-2' />{pkg.duration}
+                                    </CardDescription>
+                                    <div className='flex justify-between items-center mt-4'>
+                                        <div>
+                                            <span className='text-green-400 font-bold text-xl'>{pkg.price}</span>
+                                            {pkg.oldPrice && (
+                                                <span className='text-gray-400 line-through ml-2'>{pkg.oldPrice}</span>
+                                            )}
+                                        </div>
+                                    </div>
                                 </CardContent>
                                 <CardFooter>
-                                    <p>Card Footer</p>
+                                    <Button className='bg-orange-500 hover:bg-orange-600 w-full'>
+                                        View Details
+                                    </Button>
                                 </CardFooter>
                             </Card>
 
                         </div>
                     </CarouselItem>
                 ))}
-
-
             </CarouselContent>
             <CarouselPrevious className='left-0' />
             <CarouselNext className='right-0' />
