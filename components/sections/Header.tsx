@@ -4,15 +4,9 @@ import React from 'react'
 import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoGithub } from "react-icons/io";
 import { FaInstagram } from "react-icons/fa6";
-import { MessageCircle, Phone } from 'lucide-react';
+import { Menu, MessageCircle, Phone, Search, User } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Herr_Von_Muellerhoff } from 'next/font/google';
-import { getHmrRefreshHash } from 'next/dist/server/app-render/work-unit-async-storage.external';
-
-
-
-
 
 const Header = () => {
     const socialLinks = [
@@ -83,14 +77,24 @@ const Header = () => {
                         height={50}
                         className='w-36 lg:w-52 h-auto'
                     />
-                    <nav className='hidden lg:flex space-x-8 text-lg font-semibold'>
+                    <nav className='hidden lg:flex space-x-7 text-lg font-semibold'>
                         {
                             navigationLinks.map((e, index) => (
-                                <Link href={e.href} key={index}>{e.label}</Link>
+                                <Link href={e.href} key={index} className='hover:text-orange-500'>{e.label}</Link>
                             ))
                         }
                     </nav>
-
+                    <div className='flex items-center space-x-4'>
+                        <div className='p-3 hidden lg:flex bg-orange-500 cursor-pointer text-white rounded-full'>
+                            <Search />
+                        </div>
+                        <div className='p-3 hidden lg:flex bg-orange-500 cursor-pointer text-white rounded-full'>
+                            <Menu />
+                        </div>
+                        <div className='p-3 hidden lg:flex bg-orange-500 cursor-pointer text-white rounded-full'>
+                            <User />
+                        </div>
+                    </div>
 
                 </div>
             </div>
