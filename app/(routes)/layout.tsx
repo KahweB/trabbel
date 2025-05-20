@@ -9,7 +9,7 @@ interface RouteLayoutProps {
 const RouteLayout = ({ children }: RouteLayoutProps) => {
     return (
         <div>
-            <Header />
+            <Header min-h-screen />
             {children}
             <Footer />
         </div>
