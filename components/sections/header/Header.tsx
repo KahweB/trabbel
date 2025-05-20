@@ -9,7 +9,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import MobileMenu from './MobileMenu';
 import SearchPopup from './SearchPopup';
-import { navigationLinks } from '@/links';
+import { navigationLinks } from '@/constants';
 
 const Header = () => {
     const socialLinks = [

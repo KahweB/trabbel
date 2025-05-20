@@ -5,7 +5,7 @@ import { FaInstagram, FaXTwitter } from 'react-icons/fa6'
 import { IoLogoGithub } from 'react-icons/io'
 import { Input } from '../../ui/input'
 import { Button } from '../../ui/button'
-import { navigationLinks } from '@/links'
+import { navigationLinks } from '@/constants'
 
 const Footer = () => {
     const socialLinks = [

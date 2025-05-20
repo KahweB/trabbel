@@ -3,7 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 import { Menu } from 'lucide-react'
 import { Sheet, SheetClose, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
-import { navigationLinks } from '@/links'
+import { navigationLinks } from '@/constants'
 
 
 const MobileMenu = () => {
