@@ -1,8 +1,12 @@
 import RecentProduct from "@/components/sections/recent/RecentProduct";
+import Hero from "./_components/Hero/Hero";
 
 
 export default function Home() {
   return (
-    <div><RecentProduct /></div>
+    <div>
+      <Hero />
+      <RecentProduct />
+    </div>
   );
 }
