@@ -8,6 +8,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import Image from 'next/image';
+import MainSearch from './MainSearch';
 
 
 const Hero = () => {
@@ -67,6 +68,7 @@ const Hero = () => {
 
                     </Swiper>
                 </div>
+                <MainSearch />
 
             </div>
 
