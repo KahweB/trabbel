@@ -63,7 +63,7 @@ const MainSearch = () => {
                         <SelectItem value="1500+">$1500+</SelectItem>
                     </SelectContent>
                 </Select>
-                <Button className='bg-orange-500 text-white hover:bg-orange-600 py-6 w-full'>
+                <Button className='bg-orange-500 text-white hover:bg-orange-600 py-6 w-full lg:max-w-30'>
                     Find Now
                 </Button>
             </div>
