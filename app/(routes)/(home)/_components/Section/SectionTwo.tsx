@@ -16,10 +16,10 @@ const SectionTwo = () => {
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis sit doloribus ea ipsum pariatur tempora unde dicta excepturi natus quisquam eveniet esse earum repellendus consequatur voluptatum molestiae quos ratione, alias dolor obcaecati quibusdam, beatae neque. Eaque iusto voluptatem repellat maxime possimus quis facere esse? Quidem accusamus saepe ratione eius excepturi.
                 </p>
                 <div className='flex justify-center gap-4'>
-                    <Button className='bg-green-500 text-white py-6 px-8 rounded-lg hover:bg-green-600 transition duration-500'>
+                    <Button className='bg-green-500 text-white py-6 px-8 rounded-lg hover:bg-green-600 transition duration-500 cursor-pointer'>
                         Detail
                     </Button>
-                    <Button className='bg-orange-500 text-white py-6 px-8 rounded-lg hover:bg-orange-600 transition duration-500'>
+                    <Button className='bg-orange-500 text-white py-6 px-8 rounded-lg hover:bg-orange-600 transition duration-500 cursor-pointer'>
                         Browse
                     </Button>
                 </div>

@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button'
 
 const MainSearch = () => {
     return (
-        <div className='absolute z-50 left-1/2 transform -translate-x-1/2 top-[670px] md:top-[850px]
+        <div className='absolute z-50 left-1/2 transform -translate-x-1/2 top-[670px] md:top-[870px]
         lg:top-[400px] xl:top-[470px] 2xl:top-[570px] container px-8'>
             <div className='bg-white shadow-lg py-10 px-2 lg:px-24 rounded-md lg:rounded-full flex flex-col mt-12 lg:mt-24 lg:flex-row items-center justify-between p-4 gap-3 '>
                 <Select>
@@ -63,7 +63,7 @@ const MainSearch = () => {
                         <SelectItem value="1500+">$1500+</SelectItem>
                     </SelectContent>
                 </Select>
-                <Button className='bg-orange-500 text-white hover:bg-orange-600 py-6 w-full lg:max-w-30'>
+                <Button className='bg-orange-500 text-white hover:bg-orange-600 py-6 w-full lg:max-w-30 cursor-pointer'>
                     Find Now
                 </Button>
             </div>

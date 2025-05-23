@@ -29,7 +29,7 @@ const Hero = () => {
                     <p className='text-gray-600 text-base md:text-lg'>
                         {slides[currentSlide].description}
                     </p>
-                    <Button className='bg-orange-500 hover:bg-orange-600'>
+                    <Button className='bg-orange-500 hover:bg-orange-600 hover:cursor-pointer'>
                         {slides[currentSlide].buttonText}
                     </Button>
                 </div>

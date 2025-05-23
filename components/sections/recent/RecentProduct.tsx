@@ -76,7 +76,7 @@ const RecentProduct = () => {
                                     </div>
                                 </CardContent>
                                 <CardFooter>
-                                    <Button className='bg-orange-500 hover:bg-orange-600 w-full'>
+                                    <Button className='bg-orange-500 hover:bg-orange-600 w-full cursor-pointer'>
                                         View Details
                                     </Button>
                                 </CardFooter>
@@ -86,8 +86,8 @@ const RecentProduct = () => {
                     </CarouselItem>
                 ))}
             </CarouselContent>
-            <CarouselPrevious className='left-0' />
-            <CarouselNext className='right-0' />
+            <CarouselPrevious className='left-0 cursor-pointer' />
+            <CarouselNext className='right-0 cursor-pointer' />
         </Carousel>
     )
 }

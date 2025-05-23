@@ -18,7 +18,7 @@ const SectionOne = () => {
                     viewport={{ once: false, amount: 0.2 }}
                     transition={{ delay: 0.1 }}
                     variants={fadeInVariants}
-                    className='group overflow-hidden relative rounded-xl'>
+                    className='group overflow-hidden relative rounded-xl cursor-pointer'>
                     <Image
                         alt=''
                         src="/home/1.jpg"
@@ -35,7 +35,7 @@ const SectionOne = () => {
                     viewport={{ once: false, amount: 0.2 }}
                     transition={{ delay: 0.1 }}
                     variants={fadeInVariants}
-                    className='group overflow-hidden relative rounded-xl'>
+                    className='group overflow-hidden relative rounded-xl cursor-pointer'>
                     <Image
                         alt=''
                         src="/home/2.jpg"
