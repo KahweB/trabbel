@@ -23,10 +23,10 @@ const Hero = () => {
                     <h4 className='text-orange-600 font-bold text-lg'>
                         Lets Go Now
                     </h4>
-                    <h1 className='text-3xl md:text-5xl font-semibold text-gray-900 lg:h-1/4 md:h-35'>
+                    <h1 className='text-3xl md:text-5xl font-semibold text-gray-900 lg:h-1/4 md:h-1/4 '>
                         {slides[currentSlide].title}
                     </h1>
-                    <p className='text-gray-600 text-base md:text-lg'>
+                    <p className='text-gray-600 text-base md:text-lg md:h-1/4'>
                         {slides[currentSlide].description}
                     </p>
                     <Button className='bg-orange-500 hover:bg-orange-600'>
