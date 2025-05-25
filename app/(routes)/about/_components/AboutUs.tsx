@@ -1,7 +1,9 @@
 "use client"
 import { Button } from '@/components/ui/button'
-import React, { useEffect, useRef, useState } from 'react'
-import { animate, createDraggable, createScope, createSpring, stagger } from 'animejs';
+import React, { useEffect, useRef } from 'react'
+import { animate, stagger } from 'animejs';
+import CountUp from 'react-countup';
+import { useInView } from "react-intersection-observer";
 
 
 const AboutUs = () => {
@@ -9,6 +11,7 @@ const AboutUs = () => {
     const paragrapghRef1 = useRef(null);
     const paragrapghRef2 = useRef(null);
     const buttonsRef = useRef(null);
+
     useEffect(() => {
 
         animate(titleText.current, {
