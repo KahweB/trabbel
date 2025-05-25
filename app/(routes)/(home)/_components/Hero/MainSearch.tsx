@@ -24,8 +24,10 @@ const MainSearch = () => {
         router.push(`/search?${query}`);
     }
 
-    const handleChange = (key, value) => {
+    const handleChange = (key: string, value: string) => {
+
         setFormValues((prev) => ({ ...prev, [key]: value }))
+
     };
 
 

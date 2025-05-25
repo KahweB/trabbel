@@ -2,8 +2,7 @@
 import { Button } from '@/components/ui/button'
 import React, { useEffect, useRef } from 'react'
 import { animate, stagger } from 'animejs';
-import CountUp from 'react-countup';
-import { useInView } from "react-intersection-observer";
+
 
 
 const AboutUs = () => {
