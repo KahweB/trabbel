@@ -1,4 +1,4 @@
-
+"use client"
 import React from 'react'
 
 import { FaXTwitter } from "react-icons/fa6";
@@ -10,8 +10,12 @@ import Image from 'next/image';
 import MobileMenu from './MobileMenu';
 import SearchPopup from './SearchPopup';
 import { navigationLinks } from '@/constants';
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
+
+    const pathname = usePathname();
+
     const socialLinks = [
         {
             href: "#", icon: <FaXTwitter />
@@ -66,8 +70,8 @@ const Header = () => {
 
                     <nav className='hidden lg:flex space-x-7 text-lg font-semibold'>
                         {
-                            navigationLinks.map((e, index) => (
-                                <Link href={e.href} key={index} className='hover:text-orange-500'>{e.label}</Link>
+                            navigationLinks.map((link, index) => (
+                                <Link href={link.href} key={index} className={pathname === link.href ? "text-orange-500" : "hover:text-orange-500"}>{link.label}</Link>
                             ))
                         }
                     </nav>
