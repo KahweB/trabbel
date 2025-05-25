@@ -21,7 +21,7 @@ const MainSearch = () => {
 
     const handleSearch = () => {
         const query = new URLSearchParams(formValues).toString();
-        router.push(`/search?${{ query }}`);
+        router.push(`/search?${query}`);
     }
 
     const handleChange = (key, value) => {
