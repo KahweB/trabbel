@@ -29,6 +29,7 @@ const Stats = () => {
                                 <h3 className='text-4xl lg:text-6xl font-bold text-orange-500'>
                                     {
                                         inView ? (
+
                                             <CountUp
                                                 start={0}
                                                 end={stat.end}
