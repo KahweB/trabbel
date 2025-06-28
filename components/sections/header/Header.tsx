@@ -11,6 +11,7 @@ import MobileMenu from './MobileMenu';
 import SearchPopup from './SearchPopup';
 import { navigationLinks } from '@/constants';
 import { usePathname } from 'next/navigation';
+import { ModeToggle } from './DarkMode';
 
 const Header = () => {
 
@@ -81,6 +82,7 @@ const Header = () => {
                         <div className='p-3  lg:flex bg-blue-400 cursor-pointer text-white rounded-full'>
                             <User />
                         </div>
+                        <ModeToggle></ModeToggle>
                     </div>
 
                 </div>

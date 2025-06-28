@@ -17,18 +17,18 @@ const References = () => {
 
     return (
         <div>
-            <h2 className='text-center text-2xl lg:text-4xl font-bold text-gray-800 mb-6'>
+            <h2 className='text-center text-2xl lg:text-4xl font-bold text-gray-800 mb-6 mt-10'>
                 Thrusted by Leading Companies
             </h2>
             <Marquee
                 play={true}
-                className='bg-gray-100 py-8 '
+                className=' py-10 mb-30'
                 loop={0}
                 speed={100}
                 pauseOnHover={true}
             >
                 {companyLogos.map((logo, index) => (
-                    <div key={index} className='flex items-center justify-center w-96 h-auto'>
+                    <div key={index} className='flex items-center justify-center w-40 h-auto'>
                         <Image
                             width={700}
                             height={500}
